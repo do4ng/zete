@@ -1,0 +1,24 @@
+{
+  "name": "zete",
+  "version": "0.0.0-beta.2",
+  "description": "electron framework",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "repository": "github:do4ng/zete",
+  "license": "MIT",
+  "keywords": [
+    "electron",
+    "svelte",
+    "frontend",
+    "backend"
+  ],
+  "files": [
+    "dist",
+    "types",
+    "assets"
+  ],
+  "dependencies": {
+    "@zete/dev": "^0.0.0-alpha.12",
+    "colors": "^1.4.0"
+  }
+}

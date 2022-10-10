@@ -1,0 +1,9 @@
+{
+  "name": "zete-app",
+  "dependencies": {},
+  "main": "./core/dev",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "license": "MIT"
+}

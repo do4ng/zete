@@ -1,0 +1,10 @@
+{
+  "name": "@zete/bundler",
+  "version": "0.0.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "dependencies": {
+    "esbuild": "^0.15.7"
+  },
+  "repository": "github:do4ng/zete"
+}

@@ -1,0 +1,7 @@
+# zete
+
+🚀 electron framework
+
+```js
+
+```

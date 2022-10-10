@@ -1,0 +1,12 @@
+{
+  "name": "create-zete",
+  "version": "1.0.0",
+  "description": "create zete application",
+  "main": "index.js",
+  "bin": {
+    "create-zete": "./index.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
