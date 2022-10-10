@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { join, parse, relative } from 'path';
 import { ViteDevServer } from 'vite';
 import mime from 'mime-types';
@@ -149,6 +149,10 @@ export async function handleRequest(
       const responseFile = `${preload.html}`;
 
       let template = readFileSync(join(__dirname, '../assets/template.html')).toString();
+
+      if (existsSync(join(process.cwd(), './pages/__root.html'))) {
+        template = readFileSync(join(process.cwd(), './pages/__root.html')).toString();
+      }
 
       if (server) {
         template = await server.transformIndexHtml(url, template);
