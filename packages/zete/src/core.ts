@@ -41,17 +41,14 @@ export async function zete(config: ZeteConfig = {}, fn?: (webview: electron.Brow
     new Promise<void>((resolve) => {
       const wait = setInterval(() => {
         if (existsSync(join(config.cwd, '.zete', 'routes.js'))) {
-          console.log(readFileSync(join(config.cwd, '.zete', 'routes.js')).toString());
-          console.log(join(config.cwd, '.zete', 'routes.js'));
           clearInterval(wait);
           resolve();
         }
-        console.log('was');
       }, 100);
     });
 
   waitForBuild().then(async () => {
-    console.log('helloworld');
+    logger.dev('built successfully');
     await devServer.dev({
       port,
     });
