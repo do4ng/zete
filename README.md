@@ -16,6 +16,12 @@
 | [`@zete/dev`](./packages/zete-dev/)         | `v0(beta)`     |
 | [`@zete/bundler`](./packages/zete-bundler/) | `v1(standard)` |
 
+```bash
+$ git clone https://github.com/do4ng/zete.git
+$ yarn # npm install
+$ yarn run example
+```
+
 ## License
 
 MIT
