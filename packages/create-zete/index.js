@@ -39,8 +39,8 @@ function Clone(dir, out, output = false, course = false) {
 }
 
 const out = join(process.cwd(), process.argv.slice(2).join(' '));
-
-console.log('downloading template..'.cyan);
+console.log();
+console.log('[1/2]'.gray + ' downloading template..'.cyan);
 
 Clone(join(__dirname, 'assets'), out);
 
@@ -52,7 +52,9 @@ fs.rmSync(join(out, 'pkg.json'), {
   recursive: true,
   force: true,
 });
-console.log('installing packages..'.cyan);
+console.log('[2/2]'.gray + ' installing packages using yarn..'.cyan);
+console.log();
+console.log(`Following commands: \n\n   cd ${out}\n   yarn dev\n`);
 execSync('yarn add -D zete vite svelte electron', {
   cwd: join(process.cwd(), process.argv.slice(2).join(' ')),
 });
