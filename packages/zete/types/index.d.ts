@@ -1,3 +1,3 @@
 import { ZeteConfig } from './config';
-
-export function zete(config: ZeteConfig): Promise<void>;
+import electron from 'electron';
+export function zete(config?: ZeteConfig, fn?: (webview: electron.BrowserWindow) => void);
